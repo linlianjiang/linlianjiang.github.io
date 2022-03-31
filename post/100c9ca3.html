@@ -1,0 +1,321 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PyTorch(一)：梯度、神经网络 | Sid 's Blog</title><meta name="keywords" content="Python,Pytroch,Deeplearning,编程"><meta name="author" content="Sid"><meta name="copyright" content="Sid"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="梯度,神经网络">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PyTorch(一)：梯度、神经网络">
+<meta property="og:url" content="https://linlianjiang.github.io/post/100c9ca3.html">
+<meta property="og:site_name" content="Sid &#39;s Blog">
+<meta property="og:description" content="梯度,神经网络">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://linlianjiang.github.io/img/dlcover.png">
+<meta property="article:published_time" content="2022-02-02T17:00:00.000Z">
+<meta property="article:modified_time" content="2022-03-12T09:06:02.175Z">
+<meta property="article:author" content="Sid">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Pytorch">
+<meta property="article:tag" content="Deeplearning">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://linlianjiang.github.io/img/dlcover.png"><link rel="shortcut icon" href="/img/IMG_0063.jpg"><link rel="canonical" href="https://linlianjiang.github.io/post/100c9ca3"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'PyTorch(一)：梯度、神经网络',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-03-12 17:06:02'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-artitalk-pro/lib/card.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script async src="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-filter-gitcalendar/lib/gitcalendar.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/grey.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">31</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">23</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">14</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/paper/"><i class="fa-fw fas fa-code"></i><span> 论文学习</span></a></div><div class="menus_item"><a class="site-page" href="/news/"><i class="fa-fw far fa-newspaper"></i><span> news</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/todo/"><i class="fa-fw far fa-calendar-check"></i><span> ToDo</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/cat/"><i class="fa-fw fas fa-paw"></i><span> cat</span></a></li><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fa-regular fa-message"></i><span> artitalk</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-id-card"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://linlianjiang.github.io/img/IMG_0063.JPG')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Sid 's Blog</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/paper/"><i class="fa-fw fas fa-code"></i><span> 论文学习</span></a></div><div class="menus_item"><a class="site-page" href="/news/"><i class="fa-fw far fa-newspaper"></i><span> news</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/todo/"><i class="fa-fw far fa-calendar-check"></i><span> ToDo</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/cat/"><i class="fa-fw fas fa-paw"></i><span> cat</span></a></li><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fa-regular fa-message"></i><span> artitalk</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-id-card"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">PyTorch(一)：梯度、神经网络</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-02-02T17:00:00.000Z" title="Created 2022-02-03 01:00:00">2022-02-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-03-12T09:06:02.175Z" title="Updated 2022-03-12 17:06:02">2022-03-12</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Deeplearning/">Deeplearning</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Deeplearning/Pytorch/">Pytorch</a></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="1-数据操作"><a href="#1-数据操作" class="headerlink" title="1. 数据操作"></a>1. 数据操作</h1><h2 id="1-1-tensor"><a href="#1-1-tensor" class="headerlink" title="1.1 tensor"></a>1.1 tensor</h2><ul>
+<li>张量表示由一个数值组成的数组，这个数组可能有多个维度。</li>
+<li>具有一个轴的张量对应数学上的向量（vector）。具有两个轴的张量对应数学上的矩阵（matrix）。具有两个轴以上的张量没有特殊的数学名称。</li>
+</ul>
+<hr>
+<h2 id="1-2-自动求导"><a href="#1-2-自动求导" class="headerlink" title="1.2 自动求导"></a>1.2 自动求导</h2><blockquote>
+<p>automatic differentiation</p>
+</blockquote>
+<h3 id="1-2-1-梯度"><a href="#1-2-1-梯度" class="headerlink" title="1.2.1 梯度"></a>1.2.1 梯度</h3><ul>
+<li>函数在某点的梯度是这样一个<strong>向量</strong></li>
+<li>它的方向与取得最大方向导数的方向一致，而它的模为方向导数的最大值。</li>
+</ul>
+<h3 id="1-2-2-向量求导"><a href="#1-2-2-向量求导" class="headerlink" title="1.2.2 向量求导"></a>1.2.2 向量求导</h3><ol>
+<li>假设对函数 <script type="math/tex">y=2 \mathbf{x}^{\top} \mathbf{x}</script>  关于列向量x求导，创建变量x并为其分配⼀个初始值<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x = torch.arange(<span class="number">4.0</span>)</span><br></pre></td></tr></table></figure></li>
+<li>计算y关于x的梯度之前，我们需要⼀个地方来存储梯度<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x.requires_grad_(<span class="literal">True</span>)</span><br></pre></td></tr></table></figure></li>
+<li>计算y<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">y = <span class="number">2</span> * torch.dot(x, x) <span class="comment">#.dot()是向量內积</span></span><br></pre></td></tr></table></figure></li>
+<li>调用<strong>反向传播</strong>计算y关于x每个分量的梯度，并打印这些梯度<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">y.backward()</span><br><span class="line">x.grad</span><br><span class="line">&gt;&gt;tensor([ <span class="number">0.</span>, <span class="number">4.</span>, <span class="number">8.</span>, <span class="number">12.</span>])</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="1-2-3-验证梯度"><a href="#1-2-3-验证梯度" class="headerlink" title="1.2.3 验证梯度"></a>1.2.3 验证梯度</h3><ol>
+<li><script type="math/tex">y=2 \mathbf{x}^{\top} \mathbf{x}</script>  关于x的梯度应该为4x，开始验证<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x.grad == <span class="number">4</span> * x</span><br><span class="line">&gt;&gt;tensor([<span class="literal">True</span>, <span class="literal">True</span>, <span class="literal">True</span>, <span class="literal">True</span>])</span><br></pre></td></tr></table></figure></li>
+<li>PyTorch会累积梯度，需要清零：x.grad.zero_()</li>
+</ol>
+<hr>
+<h1 id="2-线性神经网络"><a href="#2-线性神经网络" class="headerlink" title="2. 线性神经网络"></a>2. 线性神经网络</h1><h2 id="2-1-损失函数"><a href="#2-1-损失函数" class="headerlink" title="2.1 损失函数"></a>2.1 损失函数</h2><ul>
+<li>量化⽬标的实际值与预测值之间的差距</li>
+<li>数值越小表示损失越小</li>
+</ul>
+<hr>
+<h2 id="2-2-解析解"><a href="#2-2-解析解" class="headerlink" title="2.2 解析解"></a>2.2 解析解</h2><ul>
+<li>线性回归的解用公式表达，这类解叫作解析解（analytical solution）</li>
+</ul>
+<hr>
+<h2 id="2-3-梯度下降"><a href="#2-3-梯度下降" class="headerlink" title="2.3 梯度下降"></a>2.3 梯度下降</h2><ul>
+<li><p>计算损失函数（数据集中所有样本的损失均值）关于模型参数的导数（梯度）</p>
+</li>
+<li><p>每次计算更新时随机抽取⼀小批样本，这种变体叫做<strong>小批量随机梯度下降</strong>（minibatch stochastic gradient descent）</p>
+</li>
+</ul>
+<blockquote>
+<p>计算过程</p>
+</blockquote>
+<ol>
+<li><p>每次迭代随机抽样⼀个小批量 <script type="math/tex">\beta</script>，它是由固定数量的训练样本组成的</p>
+</li>
+<li><p>计算小批量的平均损失关于模型参数的导数（梯度）</p>
+</li>
+<li><p>最后，将梯度乘以⼀个预先确定的正数 <script type="math/tex">\eta</script>，并从当前参数的值中减掉</p>
+<script type="math/tex; mode=display">
+\beta (\mathbf{w}, b) \leftarrow(\mathbf{w}, b)-\frac{\eta}{|\mathcal{B}|} \sum_{i \in \mathcal{B}} \partial_{(\mathbf{w}, b)} l^{(i)}(\mathbf{w}, b)</script></li>
+</ol>
+<blockquote>
+<p>算法步骤  </p>
+</blockquote>
+<ol>
+<li><p>初始化模型参数</p>
+</li>
+<li><p>从数据集中随机抽取小批量样本且在负梯度的⽅向上更新参数，并不断迭代这⼀步骤</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\mathbf{w} & \leftarrow \mathbf{w}-\frac{\eta}{|\mathcal{B}|} \sum_{i \in \mathcal{B}} \partial_{\mathbf{w}} l^{(i)}(\mathbf{w}, b)=\mathbf{w}-\frac{\eta}{|\mathcal{B}|} \sum_{i \in \mathcal{B}} \mathbf{x}^{(i)}\left(\mathbf{w}^{\top} \mathbf{x}^{(i)}+b-y^{(i)}\right), \\
+b & \leftarrow b-\frac{\eta}{|\mathcal{B}|} \sum_{i \in \mathcal{B}} \partial_{b} l^{(i)}(\mathbf{w}, b)=b-\frac{\eta}{|\mathcal{B}|} \sum_{i \in \mathcal{B}}\left(\mathbf{w}^{\top} \mathbf{x}^{(i)}+b-y^{(i)}\right) .
+\end{aligned}</script><ul>
+<li><script type="math/tex">|\beta|</script> :每个小批量中的样本数，也称为批量大小（batch size）</li>
+<li><script type="math/tex">\eta</script> ：学习率（learning rate）</li>
+<li>批量大小和学习率的值通常是手动预先指定，而不是通过模型训练得到的</li>
+<li>超参数（hyperparameter）：可以调整但不在训练过程中更新的参数</li>
+<li>泛化（generalization）：找到一组参数能让在未见过的数据上实现较低的损失</li>
+</ul>
+</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">Sid</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://linlianjiang.github.io/post/100c9ca3.html">https://linlianjiang.github.io/post/100c9ca3.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Python/">Python</a><a class="post-meta__tags" href="/tags/Pytorch/">Pytorch</a><a class="post-meta__tags" href="/tags/Deeplearning/">Deeplearning</a></div><div class="post_share"><div class="social-share" data-image="https://linlianjiang.github.io/img/dlcover.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/post/d8e29109.html"><img class="prev-cover" src="https://linlianjiang.github.io/img/pytorch.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">PyTorch常用函数</div></div></a></div><div class="next-post pull-right"><a href="/post/43306d4f.html"><img class="next-cover" src="https://linlianjiang.github.io/img/Pythoncoding.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Python编程快速上手</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/post/3212338.html" title="PyTorch(三)：线性回归深度学习实现"><img class="cover" src="https://linlianjiang.github.io/img/dlcover.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-04</div><div class="title">PyTorch(三)：线性回归深度学习实现</div></div></a></div><div><a href="/post/6008de88.html" title="PyTorch(二)：线性回归实现"><img class="cover" src="https://linlianjiang.github.io/img/dlcover.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-03</div><div class="title">PyTorch(二)：线性回归实现</div></div></a></div><div><a href="/post/ec5b2672.html" title="PyTorch(四)：多层感知机"><img class="cover" src="https://linlianjiang.github.io/img/dlcover.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-07</div><div class="title">PyTorch(四)：多层感知机</div></div></a></div><div><a href="/post/d8e29109.html" title="PyTorch常用函数"><img class="cover" src="https://linlianjiang.github.io/img/pytorch.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-03</div><div class="title">PyTorch常用函数</div></div></a></div><div><a href="/post/43306d4f.html" title="Python编程快速上手"><img class="cover" src="https://linlianjiang.github.io/img/Pythoncoding.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-01-30</div><div class="title">Python编程快速上手</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/grey.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Sid</div><div class="author-info__description">algorithm,math,computer graphics,computer vision</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">31</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">23</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">14</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/linlianjiang/"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://linlianjiang.github.io" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:jianglinlian.ll@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://blog.csdn.net/j_linlian" target="_blank" title=""><i class="fas fa-rss"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C"><span class="toc-text">1. 数据操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-tensor"><span class="toc-text">1.1 tensor</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E8%87%AA%E5%8A%A8%E6%B1%82%E5%AF%BC"><span class="toc-text">1.2 自动求导</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-1-%E6%A2%AF%E5%BA%A6"><span class="toc-text">1.2.1 梯度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-2-%E5%90%91%E9%87%8F%E6%B1%82%E5%AF%BC"><span class="toc-text">1.2.2 向量求导</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-3-%E9%AA%8C%E8%AF%81%E6%A2%AF%E5%BA%A6"><span class="toc-text">1.2.3 验证梯度</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E7%BA%BF%E6%80%A7%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C"><span class="toc-text">2. 线性神经网络</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0"><span class="toc-text">2.1 损失函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-%E8%A7%A3%E6%9E%90%E8%A7%A3"><span class="toc-text">2.2 解析解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D"><span class="toc-text">2.3 梯度下降</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Sid</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/copy-tex.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/copy-tex.css"><script>(() => {
+  document.querySelectorAll('#article-container span.katex-display').forEach(item => {
+    btf.wrap(item, 'div', { class: 'katex-wrap'})
+  })
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+  function card_artitalk_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-shuo"><div class="card-content" style="height:auto;min-height:280px;"><div class="item-headline"><i class="fas fa-comments"></i><span><a href="/artitalk/" title="artitalk page link">碎碎念</a></span><a id="cardVisual" style="cursor:pointer;float:right" onclick="cardVisual()">编辑</a></div><div id="artitalk_main" style="width:100%;height:100%;padding:1px"></div></div></div>';
+    console.log('已挂载card_artitalk');
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html);
+    (()=>{
+      const init = () => {
+        new Artitalk(Object.assign({
+          appId: 'qDJiEYSBmjahPMzb5kfn4nwo-MdYXbMMI',
+          appKey: 'vRv7kot68WrsIzoeLzVK4d6N',
+        }, {"serverURL":"https://qDJiEYSB.api.lncldglobal.com","lang":"zh","pageSize":1,"color1":"#FEF8EA","color2":"#00c4b6","color3":"#4C4948","atEmoji":{"Mafumafu1":"https://cdn.jsdelivr.net/gh/GamerNoTitle/ValineCDN@master/Mafumafu/199749454.png","Mafumafu2":"https://cdn.jsdelivr.net/gh/GamerNoTitle/ValineCDN@master/Mafumafu/199749455.png"}} ))
+      }
+      if (typeof Artitalk === 'function') {
+        init()
+      } else {
+        getScript('https://npm.elemecdn.com/artitalk').then(init)
+      }
+    })()
+    }
+  var elist = '/post/,/artitalk/'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    card_artitalk_injector_config();
+  }
+  else if (epage === cpage){
+    card_artitalk_injector_config();
+  }
+  </script><script async src="https://npm.elemecdn.com/hexo-butterfly-artitalk-pro/lib/card_visual.js"></script><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><script data-pjax src="https://npm.elemecdn.com/hexo-filter-gitcalendar/lib/gitcalendar.js"></script><script data-pjax>
+  function gitcalendar_injector_config(){
+      var parent_div_git = document.getElementById('recent-posts');
+      var item_html = '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><style>#git_container{min-height: 280px}@media screen and (max-width:650px) {#git_container{min-height: 0px}}</style><div id="git_loading" style="width:10%;height:100%;margin:0 auto;display: block;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animatetransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animatetransform></path></svg><style>#git_container{display: none;}</style></div><div id="git_container"></div></div>';
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      console.log('已挂载gitcalendar')
+      }
+
+    if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+        gitcalendar_injector_config()
+        GitCalendarInit("https://gitcalendar.akilar.top/api?linlianjiang",['#e4dfd7', '#f9f4dc', '#f7e8aa', '#f7e8aa', '#f8df72', '#fcd217', '#fcc515', '#f28e16', '#fb8b05', '#d85916', '#f43e06'],'linlianjiang')
+    }
+  </script><!-- hexo injector body_end end --></body></html>

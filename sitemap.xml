@@ -13,7 +13,7 @@
   <url>
     <loc>https://linlianjiang.github.io/post/8885bc74.html</loc>
     
-    <lastmod>2022-04-19</lastmod>
+    <lastmod>2022-04-28</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -383,6 +383,13 @@
   </url>
   
   <url>
+    <loc>https://linlianjiang.github.io/tags/NIPS/</loc>
+    <lastmod>2022-04-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://linlianjiang.github.io/tags/Multimodal/</loc>
     <lastmod>2022-04-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -391,13 +398,6 @@
   
   <url>
     <loc>https://linlianjiang.github.io/tags/Object-Retrieval/</loc>
-    <lastmod>2022-04-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://linlianjiang.github.io/tags/NIPS/</loc>
     <lastmod>2022-04-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -516,14 +516,14 @@
   </url>
   
   <url>
-    <loc>https://linlianjiang.github.io/tags/CS-231A/</loc>
+    <loc>https://linlianjiang.github.io/tags/GRU/</loc>
     <lastmod>2022-04-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://linlianjiang.github.io/tags/GRU/</loc>
+    <loc>https://linlianjiang.github.io/tags/CS-231A/</loc>
     <lastmod>2022-04-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

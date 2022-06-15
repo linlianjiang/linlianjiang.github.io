@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://linlianjiang.github.io/news/index.html</loc>
+    
+    <lastmod>2022-06-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://linlianjiang.github.io/post/70b03d67.html</loc>
     
     <lastmod>2022-05-18</lastmod>
@@ -13,16 +22,7 @@
   <url>
     <loc>https://linlianjiang.github.io/post/d0f3ece9.html</loc>
     
-    <lastmod>2022-05-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://linlianjiang.github.io/news/index.html</loc>
-    
-    <lastmod>2022-04-30</lastmod>
+    <lastmod>2022-05-18</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -373,197 +373,197 @@
 
   <url>
     <loc>https://linlianjiang.github.io/</loc>
-    <lastmod>2022-05-18</lastmod>
+    <lastmod>2022-06-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://linlianjiang.github.io/tags/NLP/</loc>
-    <lastmod>2022-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://linlianjiang.github.io/tags/NIPS/</loc>
-    <lastmod>2022-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://linlianjiang.github.io/tags/Point-Cloud/</loc>
-    <lastmod>2022-05-18</lastmod>
+    <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/ShapeNet/</loc>
-    <lastmod>2022-05-18</lastmod>
+    <lastmod>2022-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://linlianjiang.github.io/tags/NLP/</loc>
+    <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/Multimodal/</loc>
-    <lastmod>2022-05-18</lastmod>
+    <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/Object-Retrieval/</loc>
-    <lastmod>2022-05-18</lastmod>
+    <lastmod>2022-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://linlianjiang.github.io/tags/NIPS/</loc>
+    <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/SIGGRAPH-Asia/</loc>
-    <lastmod>2022-05-18</lastmod>
+    <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/Point-Cloud-segmentation/</loc>
-    <lastmod>2022-05-18</lastmod>
+    <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/Language/</loc>
-    <lastmod>2022-05-18</lastmod>
+    <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/arxiv/</loc>
-    <lastmod>2022-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://linlianjiang.github.io/tags/CVPR/</loc>
-    <lastmod>2022-05-18</lastmod>
+    <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/IEEE/</loc>
-    <lastmod>2022-05-18</lastmod>
+    <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://linlianjiang.github.io/tags/AAAI/</loc>
-    <lastmod>2022-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://linlianjiang.github.io/tags/ECCV/</loc>
-    <lastmod>2022-05-18</lastmod>
+    <loc>https://linlianjiang.github.io/tags/CVPR/</loc>
+    <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/Siggraph-Asia/</loc>
-    <lastmod>2022-05-18</lastmod>
+    <lastmod>2022-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://linlianjiang.github.io/tags/AAAI/</loc>
+    <lastmod>2022-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://linlianjiang.github.io/tags/ECCV/</loc>
+    <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/ICCV/</loc>
-    <lastmod>2022-05-18</lastmod>
+    <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/PMLR/</loc>
-    <lastmod>2022-05-18</lastmod>
+    <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/Hexo/</loc>
-    <lastmod>2022-05-18</lastmod>
+    <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2022-05-18</lastmod>
+    <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/CS-131/</loc>
-    <lastmod>2022-05-18</lastmod>
+    <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/Computer-Graphics/</loc>
-    <lastmod>2022-05-18</lastmod>
+    <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/Python/</loc>
-    <lastmod>2022-05-18</lastmod>
+    <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/Pytorch/</loc>
-    <lastmod>2022-05-18</lastmod>
+    <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/Deeplearning/</loc>
-    <lastmod>2022-05-18</lastmod>
+    <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/GRU/</loc>
-    <lastmod>2022-05-18</lastmod>
+    <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/CS-231A/</loc>
-    <lastmod>2022-05-18</lastmod>
+    <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/Linux/</loc>
-    <lastmod>2022-05-18</lastmod>
+    <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -572,112 +572,112 @@
   
   <url>
     <loc>https://linlianjiang.github.io/categories/paper-learning/</loc>
-    <lastmod>2022-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://linlianjiang.github.io/categories/paper-learning/Multimodal/</loc>
-    <lastmod>2022-05-18</lastmod>
+    <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/categories/paper-learning/NLP/</loc>
-    <lastmod>2022-05-18</lastmod>
+    <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/categories/paper-learning/Point-Cloud/</loc>
-    <lastmod>2022-05-18</lastmod>
+    <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/categories/paper-learning/Language/</loc>
-    <lastmod>2022-05-18</lastmod>
+    <lastmod>2022-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://linlianjiang.github.io/categories/paper-learning/Multimodal/</loc>
+    <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/categories/Hexo/</loc>
-    <lastmod>2022-05-18</lastmod>
+    <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/categories/Computer-Graphics/</loc>
-    <lastmod>2022-05-18</lastmod>
+    <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/categories/Deeplearning/</loc>
-    <lastmod>2022-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://linlianjiang.github.io/categories/Hexo/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2022-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://linlianjiang.github.io/categories/Computer-Graphics/CS-131/</loc>
-    <lastmod>2022-05-18</lastmod>
+    <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/categories/knowledge/</loc>
-    <lastmod>2022-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://linlianjiang.github.io/categories/Deeplearning/Pytorch/</loc>
-    <lastmod>2022-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://linlianjiang.github.io/categories/Computer-Graphics/CS-231A/</loc>
-    <lastmod>2022-05-18</lastmod>
+    <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/categories/Python/</loc>
-    <lastmod>2022-05-18</lastmod>
+    <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/categories/Linux/</loc>
-    <lastmod>2022-05-18</lastmod>
+    <lastmod>2022-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://linlianjiang.github.io/categories/Hexo/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2022-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://linlianjiang.github.io/categories/Computer-Graphics/CS-131/</loc>
+    <lastmod>2022-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://linlianjiang.github.io/categories/Deeplearning/Pytorch/</loc>
+    <lastmod>2022-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://linlianjiang.github.io/categories/Computer-Graphics/CS-231A/</loc>
+    <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/categories/Linux/shell/</loc>
-    <lastmod>2022-05-18</lastmod>
+    <lastmod>2022-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

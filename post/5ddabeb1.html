@@ -1,0 +1,435 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>16_CVPR_Natural Language Object Retrieval | Sid 's Blog</title><meta name="keywords" content="NLP,目标检测"><meta name="author" content="Sid"><meta name="copyright" content="Sid"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="NLP,目标检测">
+<meta property="og:type" content="article">
+<meta property="og:title" content="16_CVPR_Natural Language Object Retrieval">
+<meta property="og:url" content="https://linlianjiang.github.io/post/5ddabeb1.html">
+<meta property="og:site_name" content="Sid &#39;s Blog">
+<meta property="og:description" content="NLP,目标检测">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://linlianjiang.github.io/img/IMG_0063.JPG">
+<meta property="article:published_time" content="2022-02-10T14:00:00.000Z">
+<meta property="article:modified_time" content="2022-03-12T09:06:02.142Z">
+<meta property="article:author" content="Sid">
+<meta property="article:tag" content="Multimodal">
+<meta property="article:tag" content="NLP">
+<meta property="article:tag" content="Object Retrieval">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://linlianjiang.github.io/img/IMG_0063.JPG"><link rel="shortcut icon" href="/img/icon.png"><link rel="canonical" href="https://linlianjiang.github.io/post/5ddabeb1"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '16_CVPR_Natural Language Object Retrieval',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-03-12 17:06:02'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-artitalk-pro/lib/card.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script async src="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/grey.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">35</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">27</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">16</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/paper/"><i class="fa-fw fas fa-code"></i><span> 论文学习</span></a></div><div class="menus_item"><a class="site-page" href="/news/"><i class="fa-fw far fa-newspaper"></i><span> news</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/todo/"><i class="fa-fw far fa-calendar-check"></i><span> ToDo</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/cat/"><i class="fa-fw fas fa-paw"></i><span> cat</span></a></li><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fa-regular fa-message"></i><span> artitalk</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-id-card"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://linlianjiang.github.io/img/IMG_0063.JPG')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Sid 's Blog</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/paper/"><i class="fa-fw fas fa-code"></i><span> 论文学习</span></a></div><div class="menus_item"><a class="site-page" href="/news/"><i class="fa-fw far fa-newspaper"></i><span> news</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/todo/"><i class="fa-fw far fa-calendar-check"></i><span> ToDo</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/cat/"><i class="fa-fw fas fa-paw"></i><span> cat</span></a></li><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fa-regular fa-message"></i><span> artitalk</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-id-card"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">16_CVPR_Natural Language Object Retrieval</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-02-10T14:00:00.000Z" title="Created 2022-02-10 22:00:00">2022-02-10</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-03-12T09:06:02.142Z" title="Updated 2022-03-12 17:06:02">2022-03-12</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/paper-learning/">paper learning</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/paper-learning/Multimodal/">Multimodal</a></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><div class="btns rounded grid5">
+            <a class="button" target="_blank" rel="noopener" href='https://openaccess.thecvf.com/content_cvpr_2016/papers/Hu_Natural_Language_Object_CVPR_2016_paper.pdf' title='paper'><i class='fas fa-book-open'></i>paper</a>
+<a class="button" target="_blank" rel="noopener" href='https://github.com/ronghanghu/natural-language-object-retrieval' title='code'><i class='fas fa-download'></i>code</a>
+          </div>
+<h1 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h1><ol>
+<li><p>通过领域自适应（ domain adaptation）和哈希算法（hashing），目标检测的类别数量已经从10K增长到100K</p>
+</li>
+<li><p>在预定义固定的对象类别集合（predefinedfixed set of object categories）中，人们喜欢用自然语言指代物体，而不是使用预定义的类别标签（predefined category label）</p>
+</li>
+<li><p>自然语言查询可以包括不同类型的短语，如：类别（categories）、属性（attributes）、空间配置（spatial configurations）（#空间结构分布）和与其他对象的交互（interactions with other objects）</p>
+<div class="img-wrap"><div class="img-bg"><img class="img" src="https://linlianjiang.github.io/img/p1.jpg" style="width:400px;"/></div></div>
+</li>
+<li><p>如图，将自然语言对象检索框定为对给定图像中一组候选位置的检索任务；简单地将基于文本的图像检索系统应用于从该任务的候选位置裁剪出来的图像区域，会导致较低的性能；作为自然语言，<strong>对象检索</strong>涉及对象的<strong>空间配置</strong>和作为<strong>上下文的全局场景</strong></p>
+</li>
+<li><p>例如：判断场景中的一个物体与“the man in a blue jacket sitting on the right in front of the house”的可能性有多大</p>
+<ul>
+<li>需要观察对象以确定它是否是  <strong>“the man”(category)</strong>，<strong>“in blue jacket” (attribute)</strong> 和 <strong>“sitting”(action)</strong>，以及它在场景中的<strong>空间配置</strong>以确定它是否 <strong>“on the right”</strong></li>
+<li>整个图像作为<strong>全局上下文信息</strong>来确定它是否 <strong>“in front of the house”</strong></li>
+</ul>
+</li>
+<li><p>图像检索技术：</p>
+<ol>
+<li>基于文本的图像检索 (TBIR, Text Based Image Retrieval) ：利用<strong>文本标注</strong>的方式对图像中的内容进行描述，为每幅图像形成描述这幅图像内容的关键词，比如图像中的物体、场景等，这种方式可以是人工标注方式，也可以通过图像识别技术进行半自动标注<ul>
+<li>文本检索过程实际上可以理解为文本特征匹配的过程，以上过程文本使用词袋向量（Bag-of-Words，BoW）来表征文本内容     </li>
+<li>BoW特征提取过程包括以下几个步骤：       <ul>
+<li>将文档中的文本解析成单词 ； </li>
+<li>使用词干表示各单词,去掉常用词； </li>
+<li>统计当前文档中每个单词（词干）出现的频次；</li>
+<li>建立表示该文档的向量，向量的每次元素代表对应位置的单词出现的频次，向量长度等于词库内单词个数。在构建词向量时，通常会引入加权机制。常用的一种加权方式为采用 tf-idf (term frequecy-inverse document frequency) 。 tf-idf的计算方式如下： <div class="img-wrap"><div class="img-bg"><img class="img" src="https://linlianjiang.github.io/img/p2.jpg" style="width:400px;"/></div></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>基于内容的图像检索(CBIR, Content Based Image Retrieval) ：使用视觉特征来表示， 对图像提取若干个局部特征描述子，如sift，对这些描述子进行量化。量化器通常通过聚类得到：对特征描述子集合进行k-means聚类，聚类后得到的k个质心即为视觉单词。描述子desc的量化结果q(desc)为与desc最相近的质心的索引。所有质心构成了视觉词表。图像中的特征单词的词频构成了该图像的向量描述BoVW。假设视觉词表中的单词个数为N，那么BoVW向量的长度为N，向量中的元素为对应单词出现在该图像中的频次或者采用采用td-idf权重更新向量中每个元素值。 </p>
+</li>
+<li><p>自然语言图像检索方法：在给定输入图像、文本查询和一组候选位置(例如对象建议方法)的情况下，使用循环神经网络模型（recurrent neural network）对基于<strong>局部</strong>描述符、空间配置和全局上下文的候选位置进行评分。检索得分最高的候选人。</p>
+</li>
+</ol>
+</li>
+<li><p>本文提出空间上下文循环卷积网络(Spatial Context Recurrent ConvNet，SCRC)模型来学习一个评分函数，该函数将文本查询、候选区域、它们的空间配置和全局上下文作为候选区域的输入和输出评分</p>
+</li>
+<li><p>使用了一个两层的LSTM（Long short-term memory）网络结构，<strong>嵌入的文本序列和视觉特征分别作为第一层和第二层的输入</strong></p>
+</li>
+<li><p>相比其他类型的 visual-linguistic 模型如 bag-of-words ,使用 recurrent neural network 作为scoring function的优点之一是简单的反向传播整个模型很容易地学会了端到端通过,允许视觉特征提取和文本序列嵌入互相适应,它的性能明显优于之前使用单词袋的方法</p>
+</li>
+<li><p>自然语言对象检索的主要挑战之一是缺乏带有标注对象边界框和描述对的大规模数据集</p>
+<ul>
+<li>为了解决这一问题，我们展示了通过先在图像标题领域进行预处理，然后将其调整到自然语言对象检索领域，可以将从前一个任务中学习到的视觉语言知识转移到后一个任务中</li>
+<li>这种预训练和自适应过程提高了性能，避免了过拟合，特别是在目标检索训练数据集较小的情况下</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h1 id="2-Related-work"><a href="#2-Related-work" class="headerlink" title="2. Related work"></a>2. Related work</h1><ol>
+<li>基于来自ImageNET分类器的单词、句子模型和嵌入包，解决了类似的问题，<strong>并基于文本查询在图像中定位对象</strong></li>
+<li>给定一组候选对象区域，使用大规模预训练分类器预测的类别名称，从这些表示为词袋的候选对象生成文本，并将词袋与查询文本进行比较</li>
+<li>其他方法从查询文本生成视觉特征并将其与图像区域匹配，例如通过基于文本的图像搜索引擎或学习文本短语和视觉特征的联合嵌入</li>
+<li>通过recurrent network model来根据给定的描述定位对象</li>
+</ol>
+<hr>
+<h1 id="3-Model"><a href="#3-Model" class="headerlink" title="3. Model"></a>3. Model</h1><blockquote>
+<p>用自然语言对象检索的空间上下文循环卷积网络(SCRC)模型和训练过程。</p>
+<p>在测试时，提供了一幅图像、一个自然语言对象查询和一组候选边界框(例如来自对象建议方法，如EdgeBox)。系统需要从候选集合中选择匹配查询文本的边界框子集。</p>
+</blockquote>
+<h2 id="3-1-Spatial-Context-Recurrent-ConvNet"><a href="#3-1-Spatial-Context-Recurrent-ConvNet" class="headerlink" title="3.1 Spatial Context Recurrent ConvNet"></a>3.1 Spatial Context Recurrent ConvNet</h2><ol>
+<li>我们用于自然语言对象检索的Spatial Context Recurrent ConvNet (SCRC)模型由如下图所示的几个组件组成</li>
+<li>该模型有三个Long Short-Term Memory (LSTM)，a local and a global Convolutional Neural Network (CNN), a word embedding layer and a word prediction layer<ul>
+<li>LSTM<sub>language</sub></li>
+<li>LSTM<sub>local</sub></li>
+<li>LSTM<sub>global</sub></li>
+</ul>
+</li>
+<li><ul>
+<li>给定一个图像 <strong><em>I</em></strong> ，一个查询文本序列 <strong><em>S</em></strong> ，以及一组候选边界框 ｛b<sub>i</sub>｝in <em>I</em> </li>
+<li>网络基于 b<sub>i</sub> 上的局部图像描述符 X<sub>box</sub> 为第i个候选边界框 ｛b<sub>i</sub>｝输出一个分数 <strong><em>S<sub>i</sub></em></strong></li>
+<li>场景的空间配置盒  spatial configuration ：X<sub>spatial</sub> ,全局上下文特征: X<sub>context</sub><blockquote>
+<p>spatial configuration x<sub>spatial</sub> of the box with respect to<br>the scene, and global contextual feature X<sub>context</sub></p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="3-2-Knowledge-transfer-from-image-captioning"><a href="#3-2-Knowledge-transfer-from-image-captioning" class="headerlink" title="3.2 Knowledge transfer from image captioning"></a>3.2 Knowledge transfer from image captioning</h2><ol>
+<li>经过预训练，我们将SCRC模型应用于自然语言对象检索</li>
+<li>假设训练数据集由 <strong><em>N</em></strong> 幅图像组成，每幅图像包含 M<sub>i</sub> (i = 1,…N)个标注对象,每个对象都被一个边界框（bounding box）标注，<strong><em>K<sub>i,j</sub></em></strong>文本描述(i= 1,…, N , j = 1,…, M<sub>i</sub>)。一个对象可以用不同的描述进行多次描述</li>
+<li>在训练时，每个实例都是一个图像包围框描述元组（image-bounding box-description tuple）<strong><em>(I<sub>i</sub>, b<sub>i,j</sub>, S<sub>i,j,k</sub>)</em></strong><ul>
+<li><strong><em>I<sub>i</sub></em></strong> 是整个图像</li>
+<li>b<sub>i,j</sub> = [x<sub>min</sub>, y<sub>min</sub>, x<sub>max</sub>, y<sub>max</sub>]是第 j 个物体的边界框(bounding box)</li>
+<li>S<sub>i,j,k</sub> 是自然语言的描述文本，such as“the black and white cat”</li>
+</ul>
+</li>
+<li><p>本文的自然语言对象检索模型可以通过以局部图像区域 <strong><em>I<sub>box</sub></em></strong> 和整个图像 <strong><em>I<sub>im</sub></em></strong> 为上下文的ground truth注释中对象描述文本的概率最大化来训练，类似于训练一个通用的目标检测系统</p>
+</li>
+<li><p>自然语言对象检索中，对象的描述文本(description text)可以看作是对象的一个广义“标签”，最大化其条件概率类似于训练一个“广义分类器”，其输出是一个单词标签序列，而不是单个类别标签</p>
+</li>
+<li><p>给定一个自然语言对象检索数据集，我们从ground truth注释中构造所有元组<strong><em>(I<sub>i</sub>, b<sub>i,j</sub>, S<sub>i,j,k</sub>)</em></strong> 作为训练实例(如果对同一对象有多个描述，则构造多个元组)</p>
+</li>
+<li><p>对于训练集中的每个标注对象，基于该目标区域的边界框(bounding box)从整个图像 <strong><em>I<sub>im</sub></em></strong> 中裁剪出一个image patch <strong><em>I<sub>box</sub></em></strong> ，其空间构型 X<sub>spatial</sub> 通过方程构造</p>
+</li>
+<li><p>训练过程中的损失函数定义为: </p>
+<script type="math/tex; mode=display">
+L=-\sum_{i=1}^{N} \sum_{j=1}^{M_{i}} \sum_{k=1}^{K_{i, j}} \log \left(p\left(S_{i, j, k} \mid I_{b o x i, j}, I_{i m i}, x_{\text {spatial }_{i, j}}\right)\right)</script></li>
+<li>训练过程中，从3.2节的预训练网络中初始化模型参数，并使用较小的学习率SGD进行微调,通过反向传播对整个网络进行端到端训练</li>
+</ol>
+<hr>
+<h1 id="4-Experiments"><a href="#4-Experiments" class="headerlink" title="4. Experiments"></a>4. Experiments</h1><ol>
+<li>在ImageNET上训练一个7K object classes的large scalefine-grained classifier</li>
+<li>候选集合中的每个盒子都被划分到7K class中的一个,根据包含类别名称和同义词的ImageNET 同义词集合，从预测对象类中提取单词包</li>
+<li>然后，将单词包投影到向量空间，利用余弦距离与投影的查询文本进行匹配，得到 score</li>
+</ol>
+<h2 id="4-1-Object-retrieval-evaluation-on-ReferIt-dataset"><a href="#4-1-Object-retrieval-evaluation-on-ReferIt-dataset" class="headerlink" title="4.1 Object retrieval evaluation on ReferIt dataset"></a>4.1 Object retrieval evaluation on ReferIt dataset</h2><ol>
+<li><p>ReferIt 数据集：</p>
+<ul>
+<li><p>包含图像区域的最大的公开可用数据集</p>
+</li>
+<li><p>它包含了来自IAPR TC-12数据集的20,000张图像</p>
+</li>
+<li><p>结合SAIAPR-12数据集的分割图像区域</p>
+</li>
+<li><p>以及针对旨在从注释中识别图像区域的双人游戏中收集的图像区域的120K注释描述</p>
+</li>
+<li><p><strong>也包含一些模糊的(例如“anywhere”)和错误注释的例子，注释不对应任何对象</strong></p>
+</li>
+</ul>
+</li>
+<li><p>为了对该数据集进行评估，将2万张图像(以及它们的注释)分割为1万张用于训练和验证，1万张用于测试，并在所有带注释的图像区域上构造图像包围框描述元组作为训练实例</p>
+</li>
+<li><p>trainval集中有59976个元组(image, bounding box, description)，测试集中有60105个元组</p>
+</li>
+<li><p>数据集的实验中，训练和评估时只使用标注区域的边界框，边界框由标注器点击对应的SAIAPR-12数据集中的分割区域获得</p>
+</li>
+<li><p>为了测试结合空间配置 X<sub>spatial</sub> 和scene-level 上下文特征 x<sub>context</sub> 的效果，在ReferIt的微调中评估不同的设置</p>
+<ul>
+<li>通过在微调和测试期间将 X<sub>spatial</sub> 和 W<sub>global</sub> 设置为0</li>
+<li>该模型只能学习根据 candidate boxes中的局部图像描述符 X<sub>box</sub>为盒子打分</li>
+<li>类似地，通过将 W<sub>global</sub> 设置为0，模型可以学习 X<sub>box</sub>和 X<sub>spatial</sub> 上的评分函数，但不能利用 scene-level 上下文</li>
+</ul>
+</li>
+<li><p>作为对比，我们直接在ReferIt上训练SCRC模型，而没有对MSCOCO进行预先训练，在训练和测试时，将 X<sub>spatial</sub> 和 W<sub>global</sub> 设置为0，denoted by SCRC (w/o context, spatial, transfer)</p>
+</li>
+<li><p>模型中的CNN参数由VGG-16 net初始化，其他参数随机初始化</p>
+</li>
+<li><p>我们使用两个测试场景进行评估: </p>
+<blockquote>
+<p>检索到的区域与ground truth边界框至少有50%的IoU重叠，则被认为是正确的</p>
+</blockquote>
+<ul>
+<li>在第一个场景中，给定一个图像和一个文本查询，该模型被要求从该图像中所有带注释的区域中检索相应的图像区域</li>
+<li>在第二个场景中，给定文本查询，<strong>模型从对象建议方法产生的一组候选边界框中检索图像区域</strong>（这是一个更难的任务，但更接近真实的应用程序）</li>
+</ul>
+</li>
+</ol>
+<h2 id="4-2-Object-retrieval-evaluation-on-Kitchen-dataset"><a href="#4-2-Object-retrieval-evaluation-on-Kitchen-dataset" class="headerlink" title="4.2 Object retrieval evaluation on Kitchen dataset"></a>4.2 Object retrieval evaluation on Kitchen dataset</h2><ol>
+<li><p>Kitchen数据集：</p>
+<ul>
+<li><p>包含从ImageNET层次结构的Kitchen /household子树中采样的606张图像，每个图像有10个不同的描述注释</p>
+</li>
+<li><p>由于该数据集中的对象几乎占据了整个图像，在候选对象建议框中不使用检索</p>
+</li>
+</ul>
+</li>
+<li>在测试过程中，对于每个查询文本，候选集由11个具有ground truth和10个干扰物的图像组成。干扰物的采样要么来自同一个Kitchen数据集(“Kitchen”实验)，要么来自整个ImageNET(“ImageNET”实验)</li>
+<li>为了在这个数据集上评估，将数据集分成两部分：以300幅图像作为trainval集，306幅图像作为测试集</li>
+<li>与4.1节类似，首先在MSCOCO数据集上预训练SCRC模型用于image captioning，然后在trainval集合上对模型进行微调</li>
+<li>型通过对ground truth和10个干扰物的候选集合进行 image-level 级检索来测试，使用从整个图像中提取的特征作为 X<sub>box</sub></li>
+<li>由于数据集不涉及 spatial configurations 或 scene-level 的上下文信息，在微调和测试期间，我们将 X<sub>spatial</sub> 和 W<sub>global</sub> 设置为0</li>
+</ol>
+<hr>
+<h1 id="5-Conclusion"><a href="#5-Conclusion" class="headerlink" title="5. Conclusion"></a>5. Conclusion</h1><ol>
+<li><p>本文提出了Spatial Context Recurrent ConvNet(SCRC)的自然语言对象检索方法。SCRC是一种基于局部图像描述符、空间配置和全局场景级上下文对候选框进行评分的recurrent neural network model。我们发现，将空间结构和全局上下文结合起来，可以显著提高自然语言对象检索的性能。在我们的方法中使用的循环网络模型导致了端到端可训练的评分函数</p>
+</li>
+<li><p>此外，我们还证明了自然语言对象检索可以通过预训练(pretraining)和自适应(adaptation)来传递在 image captioning 上学习到的知识</p>
+</li>
+<li><p>由于自然语言对象检索系统的困难之一是缺乏具有 object-level 注释的大型数据集，但利用带有<strong>image-level</strong>注释的数据集可以缓解这个问题，image-level 注释通常比 object-level 描述更容易收集</p>
+<div class="img-wrap"><div class="img-bg"><img class="img" src="https://linlianjiang.github.io/img/p3.jpg"/></div></div></li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">Sid</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://linlianjiang.github.io/post/5ddabeb1.html">https://linlianjiang.github.io/post/5ddabeb1.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Multimodal/">Multimodal</a><a class="post-meta__tags" href="/tags/NLP/">NLP</a><a class="post-meta__tags" href="/tags/Object-Retrieval/">Object Retrieval</a></div><div class="post_share"><div class="social-share" data-image="https://linlianjiang.github.io/img/IMG_0063.JPG" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/post/34fcef73.html"><img class="prev-cover" src="https://linlianjiang.github.io/img/IMG_0063.JPG" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">19_AAAI_Cross-Modal Representation Learning for 3D Shape and Text by Joint Reconstruction and Prediction of View and Word Sequences</div></div></a></div><div class="next-post pull-right"><a href="/post/80d59f65.html"><img class="next-cover" src="https://linlianjiang.github.io/img/IMG_0063.JPG" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">CS131</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/post/b8e94f88.html" title="18_ACCV_Text2Shape_enerating Shapes from Natural Language by Learning Joint Embeddings"><img class="cover" src="https://linlianjiang.github.io/img/IMG_0063.JPG" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-15</div><div class="title">18_ACCV_Text2Shape_enerating Shapes from Natural Language by Learning Joint Embeddings</div></div></a></div><div><a href="/post/34fcef73.html" title="19_AAAI_Cross-Modal Representation Learning for 3D Shape and Text by Joint Reconstruction and Prediction of View and Word Sequences"><img class="cover" src="https://linlianjiang.github.io/img/IMG_0063.JPG" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-13</div><div class="title">19_AAAI_Cross-Modal Representation Learning for 3D Shape and Text by Joint Reconstruction and Prediction of View and Word Sequences</div></div></a></div><div><a href="/post/41b11405.html" title="20_ECCV_ReferIt3D_Neural Listeners for Fine-Grained 3D Object Identification in Real-World Scenes"><img class="cover" src="https://linlianjiang.github.io/img/IMG_0063.JPG" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-16</div><div class="title">20_ECCV_ReferIt3D_Neural Listeners for Fine-Grained 3D Object Identification in Real-World Scenes</div></div></a></div><div><a href="/post/f6456cd8.html" title="21_ICCV_Towers of Babel_Combining Images, Language, and 3D Geometry for Learning Multimodal Vision"><img class="cover" src="https://linlianjiang.github.io/img/IMG_0063.JPG" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-03-02</div><div class="title">21_ICCV_Towers of Babel_Combining Images, Language, and 3D Geometry for Learning Multimodal Vision</div></div></a></div><div><a href="/post/d135770a.html" title="21_PMLR_Learning Transferable Visual Models From Natural Language Supervision"><img class="cover" src="https://linlianjiang.github.io/img/IMG_0063.JPG" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-03-29</div><div class="title">21_PMLR_Learning Transferable Visual Models From Natural Language Supervision</div></div></a></div><div><a href="/post/ebb04813.html" title="21_Part2Word Learning Joint Embedding of Point Clouds and Text by Matching Parts to Words"><img class="cover" src="https://linlianjiang.github.io/img/IMG_0063.JPG" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-03-02</div><div class="title">21_Part2Word Learning Joint Embedding of Point Clouds and Text by Matching Parts to Words</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/grey.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Sid</div><div class="author-info__description">algorithm,math,computer graphics,computer vision</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">35</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">27</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">16</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/linlianjiang/"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://linlianjiang.github.io" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:jianglinlian.ll@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://blog.csdn.net/j_linlian" target="_blank" title=""><i class="fas fa-rss"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Introduction"><span class="toc-text">1. Introduction</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Related-work"><span class="toc-text">2. Related work</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Model"><span class="toc-text">3. Model</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-Spatial-Context-Recurrent-ConvNet"><span class="toc-text">3.1 Spatial Context Recurrent ConvNet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-Knowledge-transfer-from-image-captioning"><span class="toc-text">3.2 Knowledge transfer from image captioning</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-Experiments"><span class="toc-text">4. Experiments</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-Object-retrieval-evaluation-on-ReferIt-dataset"><span class="toc-text">4.1 Object retrieval evaluation on ReferIt dataset</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-Object-retrieval-evaluation-on-Kitchen-dataset"><span class="toc-text">4.2 Object retrieval evaluation on Kitchen dataset</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-Conclusion"><span class="toc-text">5. Conclusion</span></a></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Sid</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/copy-tex.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/copy-tex.css"><script>(() => {
+  document.querySelectorAll('#article-container span.katex-display').forEach(item => {
+    btf.wrap(item, 'div', { class: 'katex-wrap'})
+  })
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start -->
+  <script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/hexo-github-calendar@1.21/hexo_githubcalendar.js"></script>
+  <script data-pjax>
+        function GithubCalendarConfig(){
+            var git_githubapiurl ="https://python-github-calendar-api.vercel.app/api?linlianjiang";
+            var git_color =['#ebedf0', '#f0fff4', '#dcffe4', '#bef5cb', '#85e89d', '#34d058', '#28a745', '#22863a', '#176f2c', '#165c26', '#144620'];
+            var git_user ="linlianjiang";
+            var parent_div_git = document.getElementById('recent-posts');
+            var git_div_html = '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><div id="github_loading" style="width:10%;height:100%;margin:0 auto;display: block"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animateTransform></path></svg></div><div id="github_container"></div></div>';
+            if(parent_div_git && location.pathname =='/'){
+                console.log('已挂载github calendar')
+                // parent_div_git.innerHTML=git_div_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",git_div_html) // 有报错，但不影响使用(支持pjax跳转)
+            };
+            GithubCalendar(git_githubapiurl,git_color,git_user)
+        }
+        if(document.getElementById('recent-posts')){
+            GithubCalendarConfig()
+        }
+    </script>
+    <style>#github_container{min-height:280px}@media screen and (max-width:650px) {#github_container{background-image:;min-height:0px}}</style>
+    <style></style><script data-pjax>
+  function card_artitalk_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-shuo"><div class="card-content" style="height:auto;min-height:280px;"><div class="item-headline"><i class="fas fa-comments"></i><span><a href="/artitalk/" title="artitalk page link">碎碎念</a></span><a id="cardVisual" style="cursor:pointer;float:right" onclick="cardVisual()">编辑</a></div><div id="artitalk_main" style="width:100%;height:100%;padding:1px"></div></div></div>';
+    console.log('已挂载card_artitalk');
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html);
+    (()=>{
+      const init = () => {
+        new Artitalk(Object.assign({
+          appId: 'qDJiEYSBmjahPMzb5kfn4nwo-MdYXbMMI',
+          appKey: 'vRv7kot68WrsIzoeLzVK4d6N',
+        }, {"serverURL":"https://qDJiEYSB.api.lncldglobal.com","lang":"zh","pageSize":1,"color1":"#FEF8EA","color2":"#00c4b6","color3":"#4C4948","atEmoji":{"Mafumafu1":"https://cdn.jsdelivr.net/gh/GamerNoTitle/ValineCDN@master/Mafumafu/199749454.png","Mafumafu2":"https://cdn.jsdelivr.net/gh/GamerNoTitle/ValineCDN@master/Mafumafu/199749455.png"}} ))
+      }
+      if (typeof Artitalk === 'function') {
+        init()
+      } else {
+        getScript('https://npm.elemecdn.com/artitalk').then(init)
+      }
+    })()
+    }
+  var elist = '/post/,/artitalk/'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    card_artitalk_injector_config();
+  }
+  else if (epage === cpage){
+    card_artitalk_injector_config();
+  }
+  </script><script async src="https://npm.elemecdn.com/hexo-butterfly-artitalk-pro/lib/card_visual.js"></script><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body></html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>19_IEEE_PartNet A Large-scale Benchmark for Fine-grained and Hierarchical Part-level 3D Object Understanding | Sid 's Blog</title><meta name="keywords" content="Point Cloud,IEEE"><meta name="author" content="Sid"><meta name="copyright" content="Sid"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="paper code            0. Abstract Title: PartNet: A Large-scale Benchmark for Fine-grained and Hierarchical Part-level 3D Object Understanding   PartNet：一个一致的、大规模的3D对象数据集 使用细粒度、实例级和层次化的3D">
+<meta property="og:type" content="article">
+<meta property="og:title" content="19_IEEE_PartNet A Large-scale Benchmark for Fine-grained and Hierarchical Part-level 3D Object Understanding">
+<meta property="og:url" content="https://linlianjiang.github.io/post/5d03d506.html">
+<meta property="og:site_name" content="Sid &#39;s Blog">
+<meta property="og:description" content="paper code            0. Abstract Title: PartNet: A Large-scale Benchmark for Fine-grained and Hierarchical Part-level 3D Object Understanding   PartNet：一个一致的、大规模的3D对象数据集 使用细粒度、实例级和层次化的3D">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://linlianjiang.github.io/img/IMG_0063.JPG">
+<meta property="article:published_time" content="2022-02-19T13:00:00.000Z">
+<meta property="article:modified_time" content="2022-03-12T09:06:02.158Z">
+<meta property="article:author" content="Sid">
+<meta property="article:tag" content="Point Cloud">
+<meta property="article:tag" content="IEEE">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://linlianjiang.github.io/img/IMG_0063.JPG"><link rel="shortcut icon" href="/img/icon.png"><link rel="canonical" href="https://linlianjiang.github.io/post/5d03d506"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '19_IEEE_PartNet A Large-scale Benchmark for Fine-grained and Hierarchical Part-level 3D Object Understanding',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-03-12 17:06:02'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-artitalk-pro/lib/card.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script async src="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/grey.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">35</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">27</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">16</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/paper/"><i class="fa-fw fas fa-code"></i><span> 论文学习</span></a></div><div class="menus_item"><a class="site-page" href="/news/"><i class="fa-fw far fa-newspaper"></i><span> news</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/todo/"><i class="fa-fw far fa-calendar-check"></i><span> ToDo</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/cat/"><i class="fa-fw fas fa-paw"></i><span> cat</span></a></li><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fa-regular fa-message"></i><span> artitalk</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-id-card"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://linlianjiang.github.io/img/IMG_0063.JPG')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Sid 's Blog</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/paper/"><i class="fa-fw fas fa-code"></i><span> 论文学习</span></a></div><div class="menus_item"><a class="site-page" href="/news/"><i class="fa-fw far fa-newspaper"></i><span> news</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/todo/"><i class="fa-fw far fa-calendar-check"></i><span> ToDo</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/cat/"><i class="fa-fw fas fa-paw"></i><span> cat</span></a></li><li><a class="site-page child" href="/artitalk/"><i class="fa-fw fa-regular fa-message"></i><span> artitalk</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-id-card"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">19_IEEE_PartNet A Large-scale Benchmark for Fine-grained and Hierarchical Part-level 3D Object Understanding</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-02-19T13:00:00.000Z" title="Created 2022-02-19 21:00:00">2022-02-19</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-03-12T09:06:02.158Z" title="Updated 2022-03-12 17:06:02">2022-03-12</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/paper-learning/">paper learning</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/paper-learning/Point-Cloud/">Point Cloud</a></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><div class="btns rounded grid5">
+            <a class="button" target="_blank" rel="noopener" href='https://openaccess.thecvf.com/content_cvpr_2016/papers/Hu_Natural_Language_Object_CVPR_2016_paper.pdf' title='paper'><i class='fas fa-book-open'></i>paper</a>
+<a class="button" target="_blank" rel="noopener" href='https://github.com/ronghanghu/natural-language-object-retrieval' title='code'><i class='fas fa-download'></i>code</a>
+          </div>
+<h1 id="0-Abstract"><a href="#0-Abstract" class="headerlink" title="0. Abstract"></a>0. Abstract</h1><blockquote>
+<p>Title: PartNet: A Large-scale Benchmark for Fine-grained and Hierarchical Part-level 3D Object Understanding</p>
+</blockquote>
+<ol>
+<li>PartNet：一个一致的、大规模的3D对象数据集</li>
+<li>使用细粒度、实例级和层次化的3D零件信息进行注释</li>
+<li>本文测试了用于细粒度语义分割的四种最先进的3D深度学习算法和用于分层语义分割的三种基线方法。我们还提出了一种新的零件实例分割方法，并展示了其优于现有方法的性能</li>
+</ol>
+<hr>
+<h1 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h1><div class="img-wrap"><div class="img-bg"><img class="img" src="https://linlianjiang.github.io/img/19IEEEpartnet1.jpg"/></div></div>
+<ol>
+<li>PartNet数据集和三个基准测试任务</li>
+<li>左图：展示了层次结构中三个分段级别的示例注释</li>
+<li>右图：我们提出了三个基本且具有挑战性的分割任务，并使用PartNet建立了基准</li>
+<li>现有数据集仅在相对较少的对象实例上提供零件注释，或在粗糙但非层次化的零件注释上提供零件注释，这限制了涉及理解细粒度和层次化形状分割的应用</li>
+<li>现有的粗糙和同质零件理解算法无法在PartNet上很好地工作。首先，小而细粒度的零件（例如门把手和键盘按钮）非常丰富，对零件识别提出了新的挑战。第二，许多几何相似但语义不同的部分需要更多的全局形状上下文来区分。第三，理解形状和零件的异质性变化需要分层理解</li>
+<li>Contributions:<ul>
+<li>PartNet</li>
+<li>提出了三个部分级对象理解任务来证明这些数据的有用性：细粒度语义分割(fine-grained semantic segmentation)、层次语义分割( hierarchical semantic segmentation)和实例分割(instance segmentation)</li>
+<li>使用PartNet测试了四种最先进的语义分割算法和三种分层分割基线方法</li>
+<li>在PartNet上进行零件实例分割的任务，并描述了一种新的方法，其性能大大优于现有的baseline</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h1 id="2-Related-work"><a href="#2-Related-work" class="headerlink" title="2. Related work"></a>2. Related work</h1><div class="img-wrap"><div class="img-bg"><img class="img" src="https://linlianjiang.github.io/img/partnet1.jpg"/></div></div>
+<ol>
+<li>来自ShapeNet的1016个3D模型，来自10个对象类别，具有手动注释的细粒度级零件语义，并研究学习神经网络，以便对细粒度零件组件进行分组和标记。PartNet提出了一个大规模数据集，其中包含573585个细粒度和分层形状零件注释，涵盖24个对象类别的26671个模型</li>
+</ol>
+<hr>
+<h1 id="3-Data-Annotation"><a href="#3-Data-Annotation" class="headerlink" title="3. Data Annotation"></a>3. Data Annotation</h1><h2 id="3-1-Expert-Defined-Part-Hierarchy"><a href="#3-1-Expert-Defined-Part-Hierarchy" class="headerlink" title="3.1 Expert-Defined Part Hierarchy"></a>3.1 Expert-Defined Part Hierarchy</h2><ol>
+<li><p>引入了<strong>And-Or-Graph-style风格的层次模板</strong>，并根据预定义模板收集了零件标注</p>
+</li>
+<li><p>由于要求设计的模板覆盖所有形状和零件的变化，总结了用来指导模板设计的标准:</p>
+<pre><code>- Well-defined：**界限清楚**，部件概念被很好地描述，部件可以被多个注释器标识
+</code></pre><ul>
+<li>Consistent：<strong>一致性</strong>，部件概念在不同的部件、形状和对象类别之间共享和重用</li>
+<li>Compact：没有不必要的零件概念，零件概念在可能的情况下被重用</li>
+<li>Hierarchical：分层次，部件概念组织在一个分类中，以涵盖粗粒度和细粒度的部件</li>
+<li>Atomic：零件分类学中的叶节点由原始的、不可分解的形状组成</li>
+<li>Complete：部件分类法尽可能完整地涵盖各种不同的形状</li>
+</ul>
+</li>
+<li><p>根据以上原则，为每个对象类别构建 <strong>And-Or-Graph-style</strong> 样式的部件模板</p>
+<div class="img-wrap"><div class="img-bg"><img class="img" src="https://linlianjiang.github.io/img/partnet2.jpg"/></div></div>
+</li>
+<li><p>每个模板都以从粗语义部分到细粒度<strong>基元级组件</strong>的分层方式设计，如上图基于灯的模板</p>
+</li>
+<li><p>And-nodes 将一个部件分割成小的子部件</p>
+</li>
+<li><p>Or-nodes 将节点表示当前部分的子分类</p>
+</li>
+<li><p>and -nodes和Or -nodes的组合使用相同的模板来覆盖结构上不同的形状，同时尽可能共享公共的部件标签</p>
+</li>
+<li><p>如上图(左)和(右)所示，台灯和吸顶灯都是通过相同的模板，通过灯类型的一级Or-node解释</p>
+</li>
+<li><p>但也不可能覆盖所有部分，所以允许注释器改进模板的结构，并注释超出定义范围的部分</p>
+</li>
+<li><p>为了解决零件的歧义问题，从每个类中保留一个形状子集，并为每个形状收集多个人工注释</p>
+</li>
+</ol>
+<h2 id="3-2-Annotation-Interface"><a href="#3-2-Annotation-Interface" class="headerlink" title="3.2 Annotation Interface"></a>3.2 Annotation Interface</h2><div class="img-wrap"><div class="img-bg"><img class="img" src="https://linlianjiang.github.io/img/partnet3.jpg"/></div></div>
+<ol>
+<li>(a)显示了基于web的注释界面</li>
+<li>(b)基于模板层次结构，注释过程被设计成一个单线程的问题回答工作流，以深度优先的方式遍历模板图</li>
+<li>从根节点开始，注解者被询问一系列的问题。答案自动为当前形状实例构造最终的层次分割。对于每个问题，注释器被要求标记子部分(And-node)的数量，或者在所有子类型(or -node)中为给定的部分选择一个。对于每个叶节点部件，注释器在3D界面中注释部件几何图形</li>
+<li>注解者被询问一系列的问题。答案自动为当前形状实例构造最终的层次分割。对于每个问题，注释器被要求标记子部分(And-node)的数量，或者在所有子类型(or -node)中为给定的部分选择一个。对于每个叶节点部件，注释器在3D界面中注释部件几何图形。为了帮助他们理解部件定义和规范，我们为每个部件提供了丰富的文本定义和可视化示例。此外，我们的界面支持横截面和可见性控制来标注3D模型的内部结构</li>
+<li>采集的3D CAD模型通常包含 original mesh subgroups 和 part information</li>
+<li>(c)在注释的开头为注释器提供了原始分组，以加快注释的速度。注释器可以简单地选择多个预定义的片段来组成最终分段的一部分。我们还提供网格切割工具，当原始分组比期望的分割更粗时，可以将大的部分分割成更小的部分</li>
+</ol>
+<hr>
+<h1 id="4-PartNet-Dataset"><a href="#4-PartNet-Dataset" class="headerlink" title="4. PartNet Dataset"></a>4. PartNet Dataset</h1><ol>
+<li>PartNet数据集为26,671个形状提供了细粒度的、分层的实例级的部件分割标注，其中包含来自24个对象类别的573,585个部件实例</li>
+<li>大多数形状和对象类别都来自 <em>ShapeNetCore</em></li>
+<li>补充了室内场景中常见的3个对象类别(即剪刀、冰箱和门)，并在现有的7个类别中添加了来自 3D Warehouse模型</li>
+</ol>
+<hr>
+<h1 id="5-Tasks-and-Benchmarks"><a href="#5-Tasks-and-Benchmarks" class="headerlink" title="5. Tasks and Benchmarks"></a>5. Tasks and Benchmarks</h1><p>使用PartNet测试了三个部分级对象理解任务: 细粒度语义分割、层次语义分割和实例分割，性能优于baseline</p>
+<h2 id="5-1-Fine-grained-Semantic-Segmentation"><a href="#5-1-Fine-grained-Semantic-Segmentation" class="headerlink" title="5.1 Fine-grained Semantic Segmentation"></a>5.1 Fine-grained Semantic Segmentation</h2><p>细粒度三维语义分割需要识别和区分细小的和相似的语义部分。例如，门把手通常很小，在PartNet中平均为77分，但在门的语义上很重要。床有几个几何上相似的部分，如侧立杆、柱杆和基腿。为了识别细微的零件细节，分割系统需要通过<strong>判别特征局部地理解它们</strong>，并在<strong>整个形状的背景下全局地理解它们</strong></p>
+<blockquote>
+<p>Benchmark Algorithms</p>
+</blockquote>
+<p>为了学习局部几何特征，用PointNet++提出了一种分层特征提取方案</p>
+<blockquote>
+<p>Evaluation and Results</p>
+</blockquote>
+<ol>
+<li>我们在每个对象类别的三个分割级别评估算法:粗粒度、中粒度和细粒度</li>
+<li>在24个对象类别中，均为粗级，9个有中级，有17个中级。总的来说，我们为24个对象类别定义了50个分割级别</li>
+</ol>
+<h2 id="5-2-Hierarchical-Semantic-Segmentation"><a href="#5-2-Hierarchical-Semantic-Segmentation" class="headerlink" title="5.2 Hierarchical Semantic Segmentation"></a>5.2 Hierarchical Semantic Segmentation</h2><ol>
+<li>形状分割本质上是分层的。从粗语义到细粒度的细节，对 3D objects 的层次理解发展了对 <strong>形状组件的整体和全面的推理</strong></li>
+<li>层次语义分割问题，预测了覆盖粗粒度和细粒度零件概念的整个形状层次中的语义零件标签</li>
+<li>层次分割的一个关键问题是<strong>如何在学习过程中利用给定形状模板上的丰富零件关系</strong></li>
+<li><strong>层次分割需要对整个部分层次结构进行整体理解</strong></li>
+</ol>
+<blockquote>
+<p>Benchmark Algorithms</p>
+</blockquote>
+<ol>
+<li>提出了三种 baseline methods 处理分层分割: bottom-up, top-down and ensemble（自底向上、自顶向下和集成）<pre><code>- bottom-up：在训练过程中只考虑叶节点部分，并将子节点的预测分组到自底向上推理的层次中定义的父节点 
+- top-down：自上而下的方法学习树上所有零件语义标签上的多标签任务，并通过先分类较粗级别的节点，然后分类较细级别的节点来进行自上而下的推理
+- ensemble： 在多个层次上训练平面分割，如第5.1，并通过计算树上所有根到叶路径的平均对数似然分数进行联合推断
+- 使用PointNet++作为主干网络
+</code></pre></li>
+</ol>
+<blockquote>
+<p>Evaluation and Results</p>
+</blockquote>
+<ol>
+<li>bottom-up 只考虑训练中的叶节点部分，叶节点的父节点语义隐式编码在叶节点零件定义中。例如，椅子靠背和椅子扶手的竖条是两个不同的叶节点。top-down 的方法在培训和测试阶段都明确地利用了树结构。然而，预测误差是通过自上而下的推理累积起来的。集成方法将分层分割任务分解为多个级别的单个任务，并在考虑所有级别预测的情况下执行联合推理。虽然表现出更好的性能，但它有更多的超参数，并且对于多个网络需要更长的训练时间</li>
+</ol>
+<h2 id="5-3-Instance-Segmentation"><a href="#5-3-Instance-Segmentation" class="headerlink" title="5.3  Instance Segmentation"></a>5.3  Instance Segmentation</h2><ol>
+<li><p>实例分割的目标是<strong>检测每个零件实例，并将其从形状上下文中分割出来</strong></p>
+</li>
+<li><p>给定一个形状点云作为输入，零件实例分割的任务是在整个点云上提供几个不相交的遮罩，每个遮罩对应于对象上的单个零件实例</p>
+<div class="img-wrap"><div class="img-bg"><img class="img" src="https://linlianjiang.github.io/img/partnet4.jpg"/></div></div>
+</li>
+<li><p>提出了一种新的分段检测网络来解决实例分段问题。网络架构上图所示。使用PointNet++作为主干网络，用于提取特征并预测每个点的语义分割和K实例分割掩码</p>
+</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">Sid</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://linlianjiang.github.io/post/5d03d506.html">https://linlianjiang.github.io/post/5d03d506.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Point-Cloud/">Point Cloud</a><a class="post-meta__tags" href="/tags/IEEE/">IEEE</a></div><div class="post_share"><div class="social-share" data-image="https://linlianjiang.github.io/img/IMG_0063.JPG" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/post/5618bbe.html"><img class="prev-cover" src="https://linlianjiang.github.io/img/IMG_0063.JPG" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">18_SIGGRAPH Asia_Learning to Group and Label Fine-Grained Shape Components</div></div></a></div><div class="next-post pull-right"><a href="/post/feb8bc54.html"><img class="next-cover" src="https://linlianjiang.github.io/img/IMG_0063.JPG" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">20_IEEE_Silhouette Guided Point Cloud Reconstruction beyond Occlusion</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/post/f24baf67.html" title="15_arXiv_ShapeNet An Information-Rich 3D Model Repository"><img class="cover" src="https://linlianjiang.github.io/img/IMG_0063.JPG" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-24</div><div class="title">15_arXiv_ShapeNet An Information-Rich 3D Model Repository</div></div></a></div><div><a href="/post/5618bbe.html" title="18_SIGGRAPH Asia_Learning to Group and Label Fine-Grained Shape Components"><img class="cover" src="https://linlianjiang.github.io/img/IMG_0063.JPG" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-20</div><div class="title">18_SIGGRAPH Asia_Learning to Group and Label Fine-Grained Shape Components</div></div></a></div><div><a href="/post/fb365233.html" title="19_CVPR_PartNet_A Recursive Part Decomposition Network for Fine-grained and Hierarchical Shape Segmentation"><img class="cover" src="https://linlianjiang.github.io/img/IMG_0063.JPG" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-03-03</div><div class="title">19_CVPR_PartNet_A Recursive Part Decomposition Network for Fine-grained and Hierarchical Shape Segmentation</div></div></a></div><div><a href="/post/27596682.html" title="19_Siggraph Asia_StructureNet_Hierarchical Graph Networks for 3D Shape Generation"><img class="cover" src="https://linlianjiang.github.io/img/IMG_0063.JPG" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-24</div><div class="title">19_Siggraph Asia_StructureNet_Hierarchical Graph Networks for 3D Shape Generation</div></div></a></div><div><a href="/post/feb8bc54.html" title="20_IEEE_Silhouette Guided Point Cloud Reconstruction beyond Occlusion"><img class="cover" src="https://linlianjiang.github.io/img/IMG_0063.JPG" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-17</div><div class="title">20_IEEE_Silhouette Guided Point Cloud Reconstruction beyond Occlusion</div></div></a></div><div><a href="/post/2c4225b2.html" title="20_ECCV_PT2PC Learning to Generate 3D Point Cloud Shapes from Part Tree Conditions"><img class="cover" src="https://linlianjiang.github.io/img/IMG_0063.JPG" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-28</div><div class="title">20_ECCV_PT2PC Learning to Generate 3D Point Cloud Shapes from Part Tree Conditions</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/grey.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Sid</div><div class="author-info__description">algorithm,math,computer graphics,computer vision</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">35</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">27</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">16</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/linlianjiang/"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://linlianjiang.github.io" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:jianglinlian.ll@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://blog.csdn.net/j_linlian" target="_blank" title=""><i class="fas fa-rss"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#0-Abstract"><span class="toc-text">0. Abstract</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Introduction"><span class="toc-text">1. Introduction</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Related-work"><span class="toc-text">2. Related work</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Data-Annotation"><span class="toc-text">3. Data Annotation</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-Expert-Defined-Part-Hierarchy"><span class="toc-text">3.1 Expert-Defined Part Hierarchy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-Annotation-Interface"><span class="toc-text">3.2 Annotation Interface</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-PartNet-Dataset"><span class="toc-text">4. PartNet Dataset</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-Tasks-and-Benchmarks"><span class="toc-text">5. Tasks and Benchmarks</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-Fine-grained-Semantic-Segmentation"><span class="toc-text">5.1 Fine-grained Semantic Segmentation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-Hierarchical-Semantic-Segmentation"><span class="toc-text">5.2 Hierarchical Semantic Segmentation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-3-Instance-Segmentation"><span class="toc-text">5.3  Instance Segmentation</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Sid</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/copy-tex.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/copy-tex.css"><script>(() => {
+  document.querySelectorAll('#article-container span.katex-display').forEach(item => {
+    btf.wrap(item, 'div', { class: 'katex-wrap'})
+  })
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start -->
+  <script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/hexo-github-calendar@1.21/hexo_githubcalendar.js"></script>
+  <script data-pjax>
+        function GithubCalendarConfig(){
+            var git_githubapiurl ="https://python-github-calendar-api.vercel.app/api?linlianjiang";
+            var git_color =['#ebedf0', '#f0fff4', '#dcffe4', '#bef5cb', '#85e89d', '#34d058', '#28a745', '#22863a', '#176f2c', '#165c26', '#144620'];
+            var git_user ="linlianjiang";
+            var parent_div_git = document.getElementById('recent-posts');
+            var git_div_html = '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><div id="github_loading" style="width:10%;height:100%;margin:0 auto;display: block"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animateTransform></path></svg></div><div id="github_container"></div></div>';
+            if(parent_div_git && location.pathname =='/'){
+                console.log('已挂载github calendar')
+                // parent_div_git.innerHTML=git_div_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",git_div_html) // 有报错，但不影响使用(支持pjax跳转)
+            };
+            GithubCalendar(git_githubapiurl,git_color,git_user)
+        }
+        if(document.getElementById('recent-posts')){
+            GithubCalendarConfig()
+        }
+    </script>
+    <style>#github_container{min-height:280px}@media screen and (max-width:650px) {#github_container{background-image:;min-height:0px}}</style>
+    <style></style><script data-pjax>
+  function card_artitalk_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-shuo"><div class="card-content" style="height:auto;min-height:280px;"><div class="item-headline"><i class="fas fa-comments"></i><span><a href="/artitalk/" title="artitalk page link">碎碎念</a></span><a id="cardVisual" style="cursor:pointer;float:right" onclick="cardVisual()">编辑</a></div><div id="artitalk_main" style="width:100%;height:100%;padding:1px"></div></div></div>';
+    console.log('已挂载card_artitalk');
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html);
+    (()=>{
+      const init = () => {
+        new Artitalk(Object.assign({
+          appId: 'qDJiEYSBmjahPMzb5kfn4nwo-MdYXbMMI',
+          appKey: 'vRv7kot68WrsIzoeLzVK4d6N',
+        }, {"serverURL":"https://qDJiEYSB.api.lncldglobal.com","lang":"zh","pageSize":1,"color1":"#FEF8EA","color2":"#00c4b6","color3":"#4C4948","atEmoji":{"Mafumafu1":"https://cdn.jsdelivr.net/gh/GamerNoTitle/ValineCDN@master/Mafumafu/199749454.png","Mafumafu2":"https://cdn.jsdelivr.net/gh/GamerNoTitle/ValineCDN@master/Mafumafu/199749455.png"}} ))
+      }
+      if (typeof Artitalk === 'function') {
+        init()
+      } else {
+        getScript('https://npm.elemecdn.com/artitalk').then(init)
+      }
+    })()
+    }
+  var elist = '/post/,/artitalk/'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    card_artitalk_injector_config();
+  }
+  else if (epage === cpage){
+    card_artitalk_injector_config();
+  }
+  </script><script async src="https://npm.elemecdn.com/hexo-butterfly-artitalk-pro/lib/card_visual.js"></script><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body></html>

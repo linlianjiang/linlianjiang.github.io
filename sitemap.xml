@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://linlianjiang.github.io/post/135f3a60.html</loc>
+    
+    <lastmod>2022-11-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://linlianjiang.github.io/post/d416a547.html</loc>
     
     <lastmod>2022-11-08</lastmod>
@@ -439,13 +448,6 @@
   </url>
   
   <url>
-    <loc>https://linlianjiang.github.io/tags/CVPR/</loc>
-    <lastmod>2022-11-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://linlianjiang.github.io/tags/NLP/</loc>
     <lastmod>2022-11-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -468,6 +470,13 @@
   
   <url>
     <loc>https://linlianjiang.github.io/tags/NIPS/</loc>
+    <lastmod>2022-11-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://linlianjiang.github.io/tags/CVPR/</loc>
     <lastmod>2022-11-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -530,6 +539,13 @@
   </url>
   
   <url>
+    <loc>https://linlianjiang.github.io/tags/ICCV/</loc>
+    <lastmod>2022-11-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://linlianjiang.github.io/tags/PMLR/</loc>
     <lastmod>2022-11-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -537,7 +553,7 @@
   </url>
   
   <url>
-    <loc>https://linlianjiang.github.io/tags/ICCV/</loc>
+    <loc>https://linlianjiang.github.io/tags/Transformer/</loc>
     <lastmod>2022-11-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -558,7 +574,14 @@
   </url>
   
   <url>
-    <loc>https://linlianjiang.github.io/tags/Transformer/</loc>
+    <loc>https://linlianjiang.github.io/tags/CS-131/</loc>
+    <lastmod>2022-11-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://linlianjiang.github.io/tags/Computer-Graphics/</loc>
     <lastmod>2022-11-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -580,20 +603,6 @@
   
   <url>
     <loc>https://linlianjiang.github.io/tags/Deeplearning/</loc>
-    <lastmod>2022-11-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://linlianjiang.github.io/tags/CS-131/</loc>
-    <lastmod>2022-11-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://linlianjiang.github.io/tags/Computer-Graphics/</loc>
     <lastmod>2022-11-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -630,21 +639,7 @@
   </url>
   
   <url>
-    <loc>https://linlianjiang.github.io/categories/paper-learning/NLP/</loc>
-    <lastmod>2022-11-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://linlianjiang.github.io/categories/paper-learning/Point-Cloud/</loc>
-    <lastmod>2022-11-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://linlianjiang.github.io/categories/paper-learning/Multimodal/</loc>
     <lastmod>2022-11-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -658,6 +653,20 @@
   </url>
   
   <url>
+    <loc>https://linlianjiang.github.io/categories/paper-learning/Multimodal/</loc>
+    <lastmod>2022-11-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://linlianjiang.github.io/categories/paper-learning/NLP/</loc>
+    <lastmod>2022-11-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://linlianjiang.github.io/categories/Hexo/</loc>
     <lastmod>2022-11-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -665,14 +674,14 @@
   </url>
   
   <url>
-    <loc>https://linlianjiang.github.io/categories/Deeplearning/</loc>
+    <loc>https://linlianjiang.github.io/categories/Computer-Graphics/</loc>
     <lastmod>2022-11-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://linlianjiang.github.io/categories/Computer-Graphics/</loc>
+    <loc>https://linlianjiang.github.io/categories/Deeplearning/</loc>
     <lastmod>2022-11-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -693,6 +702,13 @@
   </url>
   
   <url>
+    <loc>https://linlianjiang.github.io/categories/Computer-Graphics/CS-131/</loc>
+    <lastmod>2022-11-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://linlianjiang.github.io/categories/Python/</loc>
     <lastmod>2022-11-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -701,13 +717,6 @@
   
   <url>
     <loc>https://linlianjiang.github.io/categories/Deeplearning/Pytorch/</loc>
-    <lastmod>2022-11-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://linlianjiang.github.io/categories/Computer-Graphics/CS-131/</loc>
     <lastmod>2022-11-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

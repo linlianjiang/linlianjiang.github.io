@@ -2,6 +2,60 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://linlianjiang.github.io/post/da43b0cb.html</loc>
+    
+    <lastmod>2023-01-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://linlianjiang.github.io/post/b3c4b9f9.html</loc>
+    
+    <lastmod>2023-01-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://linlianjiang.github.io/post/5aa8a57d.html</loc>
+    
+    <lastmod>2023-01-12</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://linlianjiang.github.io/post/a8241399.html</loc>
+    
+    <lastmod>2023-01-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://linlianjiang.github.io/post/878b5998.html</loc>
+    
+    <lastmod>2022-12-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://linlianjiang.github.io/post/e4cf3437.html</loc>
+    
+    <lastmod>2022-12-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://linlianjiang.github.io/post/98851dad.html</loc>
     
     <lastmod>2022-12-16</lastmod>
@@ -454,7 +508,7 @@
 
   <url>
     <loc>https://linlianjiang.github.io/</loc>
-    <lastmod>2022-12-16</lastmod>
+    <lastmod>2023-01-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -462,203 +516,224 @@
   
   <url>
     <loc>https://linlianjiang.github.io/tags/Point-Cloud/</loc>
-    <lastmod>2022-12-16</lastmod>
+    <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/ShapeNet/</loc>
-    <lastmod>2022-12-16</lastmod>
+    <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/NLP/</loc>
-    <lastmod>2022-12-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://linlianjiang.github.io/tags/NIPS/</loc>
-    <lastmod>2022-12-16</lastmod>
+    <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/Multimodal/</loc>
-    <lastmod>2022-12-16</lastmod>
+    <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/Object-Retrieval/</loc>
-    <lastmod>2022-12-16</lastmod>
+    <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://linlianjiang.github.io/tags/CVPR/</loc>
-    <lastmod>2022-12-16</lastmod>
+    <loc>https://linlianjiang.github.io/tags/NIPS/</loc>
+    <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/SIGGRAPH-Asia/</loc>
-    <lastmod>2022-12-16</lastmod>
+    <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/Point-Cloud-segmentation/</loc>
-    <lastmod>2022-12-16</lastmod>
+    <lastmod>2023-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://linlianjiang.github.io/tags/CVPR/</loc>
+    <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/Language/</loc>
-    <lastmod>2022-12-16</lastmod>
+    <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/arxiv/</loc>
-    <lastmod>2022-12-16</lastmod>
+    <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/IEEE/</loc>
-    <lastmod>2022-12-16</lastmod>
+    <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/Siggraph-Asia/</loc>
-    <lastmod>2022-12-16</lastmod>
+    <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/SIGGRAPH/</loc>
-    <lastmod>2022-12-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://linlianjiang.github.io/tags/AAAI/</loc>
-    <lastmod>2022-12-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://linlianjiang.github.io/tags/ECCV/</loc>
-    <lastmod>2022-12-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://linlianjiang.github.io/tags/ICCV/</loc>
-    <lastmod>2022-12-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://linlianjiang.github.io/tags/PMLR/</loc>
-    <lastmod>2022-12-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://linlianjiang.github.io/tags/Transformer/</loc>
-    <lastmod>2022-12-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://linlianjiang.github.io/tags/Hexo/</loc>
-    <lastmod>2022-12-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://linlianjiang.github.io/tags/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2022-12-16</lastmod>
+    <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/Python/</loc>
-    <lastmod>2022-12-16</lastmod>
+    <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/Pytorch/</loc>
-    <lastmod>2022-12-16</lastmod>
+    <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/Deeplearning/</loc>
-    <lastmod>2022-12-16</lastmod>
+    <lastmod>2023-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://linlianjiang.github.io/tags/LaTeX/</loc>
+    <lastmod>2023-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://linlianjiang.github.io/tags/Deep-Learning/</loc>
+    <lastmod>2023-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://linlianjiang.github.io/tags/ECCV/</loc>
+    <lastmod>2023-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://linlianjiang.github.io/tags/ICLR/</loc>
+    <lastmod>2023-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://linlianjiang.github.io/tags/AAAI/</loc>
+    <lastmod>2023-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://linlianjiang.github.io/tags/ICCV/</loc>
+    <lastmod>2023-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://linlianjiang.github.io/tags/PMLR/</loc>
+    <lastmod>2023-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://linlianjiang.github.io/tags/Transformer/</loc>
+    <lastmod>2023-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://linlianjiang.github.io/tags/Hexo/</loc>
+    <lastmod>2023-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://linlianjiang.github.io/tags/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/CS-131/</loc>
-    <lastmod>2022-12-16</lastmod>
+    <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/Computer-Graphics/</loc>
-    <lastmod>2022-12-16</lastmod>
+    <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/GRU/</loc>
-    <lastmod>2022-12-16</lastmod>
+    <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/CS-231A/</loc>
-    <lastmod>2022-12-16</lastmod>
+    <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/tags/Linux/</loc>
-    <lastmod>2022-12-16</lastmod>
+    <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -667,112 +742,126 @@
   
   <url>
     <loc>https://linlianjiang.github.io/categories/paper-learning/</loc>
-    <lastmod>2022-12-16</lastmod>
+    <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/categories/paper-learning/Multimodal/</loc>
-    <lastmod>2022-12-16</lastmod>
+    <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/categories/paper-learning/Point-Cloud/</loc>
-    <lastmod>2022-12-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://linlianjiang.github.io/categories/paper-learning/NLP/</loc>
-    <lastmod>2022-12-16</lastmod>
+    <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/categories/paper-learning/Language/</loc>
-    <lastmod>2022-12-16</lastmod>
+    <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://linlianjiang.github.io/categories/Hexo/</loc>
-    <lastmod>2022-12-16</lastmod>
+    <loc>https://linlianjiang.github.io/categories/paper-learning/NLP/</loc>
+    <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/categories/Deeplearning/</loc>
-    <lastmod>2022-12-16</lastmod>
+    <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://linlianjiang.github.io/categories/Computer-Graphics/</loc>
-    <lastmod>2022-12-16</lastmod>
+    <loc>https://linlianjiang.github.io/categories/LaTeX/</loc>
+    <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://linlianjiang.github.io/categories/Hexo/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2022-12-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://linlianjiang.github.io/categories/knowledge/</loc>
-    <lastmod>2022-12-16</lastmod>
+    <loc>https://linlianjiang.github.io/categories/paper-learning/Deep-Learning/</loc>
+    <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/categories/Deeplearning/Pytorch/</loc>
-    <lastmod>2022-12-16</lastmod>
+    <lastmod>2023-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://linlianjiang.github.io/categories/Hexo/</loc>
+    <lastmod>2023-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://linlianjiang.github.io/categories/Computer-Graphics/</loc>
+    <lastmod>2023-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://linlianjiang.github.io/categories/knowledge/</loc>
+    <lastmod>2023-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://linlianjiang.github.io/categories/Hexo/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/categories/Python/</loc>
-    <lastmod>2022-12-16</lastmod>
+    <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/categories/Computer-Graphics/CS-131/</loc>
-    <lastmod>2022-12-16</lastmod>
+    <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/categories/Computer-Graphics/CS-231A/</loc>
-    <lastmod>2022-12-16</lastmod>
+    <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/categories/Linux/</loc>
-    <lastmod>2022-12-16</lastmod>
+    <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://linlianjiang.github.io/categories/Linux/shell/</loc>
-    <lastmod>2022-12-16</lastmod>
+    <lastmod>2023-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

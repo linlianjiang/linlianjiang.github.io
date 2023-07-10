@@ -586,14 +586,14 @@
   </url>
   
   <url>
-    <loc>https://linlianjiang.github.io/tags/NIPS/</loc>
+    <loc>https://linlianjiang.github.io/tags/CVPR/</loc>
     <lastmod>2023-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://linlianjiang.github.io/tags/CVPR/</loc>
+    <loc>https://linlianjiang.github.io/tags/NIPS/</loc>
     <lastmod>2023-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -677,14 +677,14 @@
   </url>
   
   <url>
-    <loc>https://linlianjiang.github.io/tags/Deep-Learning/</loc>
+    <loc>https://linlianjiang.github.io/tags/ECCV/</loc>
     <lastmod>2023-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://linlianjiang.github.io/tags/ECCV/</loc>
+    <loc>https://linlianjiang.github.io/tags/Deep-Learning/</loc>
     <lastmod>2023-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -705,14 +705,14 @@
   </url>
   
   <url>
-    <loc>https://linlianjiang.github.io/tags/AAAI/</loc>
+    <loc>https://linlianjiang.github.io/tags/VAE/</loc>
     <lastmod>2023-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://linlianjiang.github.io/tags/VAE/</loc>
+    <loc>https://linlianjiang.github.io/tags/AAAI/</loc>
     <lastmod>2023-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -733,20 +733,6 @@
   </url>
   
   <url>
-    <loc>https://linlianjiang.github.io/tags/CS-131/</loc>
-    <lastmod>2023-07-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://linlianjiang.github.io/tags/Computer-Graphics/</loc>
-    <lastmod>2023-07-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://linlianjiang.github.io/tags/Hexo/</loc>
     <lastmod>2023-07-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -761,7 +747,14 @@
   </url>
   
   <url>
-    <loc>https://linlianjiang.github.io/tags/CS-231A/</loc>
+    <loc>https://linlianjiang.github.io/tags/CS-131/</loc>
+    <lastmod>2023-07-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://linlianjiang.github.io/tags/Computer-Graphics/</loc>
     <lastmod>2023-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -769,6 +762,13 @@
   
   <url>
     <loc>https://linlianjiang.github.io/tags/GRU/</loc>
+    <lastmod>2023-07-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://linlianjiang.github.io/tags/CS-231A/</loc>
     <lastmod>2023-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -805,14 +805,14 @@
   </url>
   
   <url>
-    <loc>https://linlianjiang.github.io/categories/paper-learning/Language/</loc>
+    <loc>https://linlianjiang.github.io/categories/paper-learning/NLP/</loc>
     <lastmod>2023-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://linlianjiang.github.io/categories/paper-learning/NLP/</loc>
+    <loc>https://linlianjiang.github.io/categories/paper-learning/Language/</loc>
     <lastmod>2023-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -854,14 +854,14 @@
   </url>
   
   <url>
-    <loc>https://linlianjiang.github.io/categories/Computer-Graphics/</loc>
+    <loc>https://linlianjiang.github.io/categories/Hexo/</loc>
     <lastmod>2023-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://linlianjiang.github.io/categories/Hexo/</loc>
+    <loc>https://linlianjiang.github.io/categories/Computer-Graphics/</loc>
     <lastmod>2023-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -875,7 +875,7 @@
   </url>
   
   <url>
-    <loc>https://linlianjiang.github.io/categories/Computer-Graphics/CS-131/</loc>
+    <loc>https://linlianjiang.github.io/categories/Hexo/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2023-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -889,14 +889,7 @@
   </url>
   
   <url>
-    <loc>https://linlianjiang.github.io/categories/Hexo/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2023-07-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://linlianjiang.github.io/categories/Computer-Graphics/CS-231A/</loc>
+    <loc>https://linlianjiang.github.io/categories/Computer-Graphics/CS-131/</loc>
     <lastmod>2023-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -904,6 +897,13 @@
   
   <url>
     <loc>https://linlianjiang.github.io/categories/Linux/</loc>
+    <lastmod>2023-07-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://linlianjiang.github.io/categories/Computer-Graphics/CS-231A/</loc>
     <lastmod>2023-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

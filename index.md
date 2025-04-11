@@ -12,8 +12,6 @@ I am a first-year PhD student under the supervision of Prof. [Yang Wang](https:/
 My research focuses on **meta-learning**, **domain adaptation**, and **generative AI** in 3D vision.
 
 ## Under Review
-[2] _TAMECloud: Test-time Adaptation with MEta-auxiliary Optimization for Point Cloud Completion_. **Linlian Jiang**, [Rui Ma](https://ruim-jlu.github.io/), [Xinxin Zuo](https://sites.google.com/site/xinxinzuohome/home), [Yang Wang](https://users.encs.concordia.ca/~wayang/).
-
 [1] _HierT2S: Enhancing Part-Level Text-to-Shape Generation via Hierarchical Structure Modeling_. **Linlian Jiang**<sup>'</sup>, [Xinxin Zuo](https://sites.google.com/site/xinxinzuohome/home)<sup>'</sup>, [Peng Zheng](https://pengzheng0707.github.io/), [Yibo Zhang](https://yiboz2001.github.io/), [Yang Wang](https://users.encs.concordia.ca/~wayang/)<sup>#</sup>, [Rui Ma](https://ruim-jlu.github.io/)<sup>#</sup>.
 
 

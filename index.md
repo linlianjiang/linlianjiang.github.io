@@ -5,7 +5,7 @@ layout: default
 
 
 ## Bio
-I am a first-year PhD student under the supervision of Prof. [Yang Wang](https://users.encs.concordia.ca/~wayang/) and Prof. [Xinxin Zuo](https://sites.google.com/site/xinxinzuohome/home). Also, I am a member of the [Intelligent Content Learning (ICL)](https://ruim-jlu.github.io/team/) Lab, advised by Prof. [Rui Ma](https://ruim-jlu.github.io/) at the [School of Artificial Intelligence](https://sai.jlu.edu.cn/en/), Jilin University.
+I am a first-year PhD student under the supervision of Prof. [Yang Wang](https://users.encs.concordia.ca/~wayang/) and Prof. [Xinxin Zuo](https://sites.google.com/site/xinxinzuohome/home). Also, I am a member of the [Intelligent Content Learning (ICL)](https://ruim-jlu.github.io/team/) Lab, advised by Prof. [Rui Ma](https://ruim-jlu.github.io/), at the [School of Artificial Intelligence](https://sai.jlu.edu.cn/en/), Jilin University.
 
 
 ## Research Interests

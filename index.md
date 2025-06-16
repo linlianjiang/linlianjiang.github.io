@@ -9,7 +9,7 @@ I am a first-year PhD student under the supervision of Prof. [Yang Wang](https:/
 
 
 ## Research Interests
-My research focuses on **domain adaptation**, and **generative AI** in 3D vision.
+My research focuses on **domain adaptation** and **generative AI** in 3D vision.
 
 ## Under Review
 [2] _TAMECloud: TAMECloud: Test-time Adaptation with MEta-auxiliary Optimization for Point Cloud Completion._ **Linlian Jiang**, [Rui Ma](https://ruim-jlu.github.io/), [Li Gu](https://scholar.google.ca/citations?user=crdHC0sAAAAJ&hl=en), [Ziqiang Wang](https://scholar.google.com/citations?hl=zh-CN&user=1CYvfKMAAAAJ&view_op=list_works&sortby=pubdate), [Xinxin Zuo](https://sites.google.com/site/xinxinzuohome/home)<sup>#</sup>, [Yang Wang](https://users.encs.concordia.ca/~wayang/)<sup>#</sup>.

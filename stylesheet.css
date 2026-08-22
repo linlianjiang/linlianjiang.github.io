@@ -25,8 +25,9 @@ strong {
 }
 
 heading {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: 'Inter', 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 22px;
+  font-weight: 500;
 }
 
 papertitle {
